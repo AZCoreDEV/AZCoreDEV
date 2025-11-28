@@ -9,7 +9,7 @@ function AZCore(value) {
                 VIEW: AZElement('div', { id: 'app' }, '', [
                         AZElement('main', {}, '', [
                                 AZElement('div', { className: 'container' }, '', [
-                                        AZElement('img', { src: '/src/assets/img/AZCore.png' }),
+                                        AZElement('img', { src: './assets/img/AZCore.png' }),
                                         AZElement('h1', {}, 'AZCore'),
                                         AZElement('P', {}, 'SIMPLIFY DEVELOPMENT'),
                                         AZElement('button', {}, 'BE READY TO EXPLORE')
