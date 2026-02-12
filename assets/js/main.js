@@ -171,11 +171,11 @@ function INDEX(PARAM) {
 					])
 				]),
 				AZElement('section', {}, '', [
-                                        AZElement('div', { className: 'AI20000000' }, '', [
-                                        	AZElement('h1', {}, 'Build SPAs with plain JavaScript.'),
-	                                        AZElement('p', {}, 'A zero-dependency, build-less SPA core with routing, DOM rendering, transitions, and loading built in.')
-                                        ])
-                                ]),
+                    AZElement('div', { className: 'AI20000000' }, '', [
+                        AZElement('h1', {}, 'Build SPAs with plain JavaScript.'),
+	                    AZElement('p', {}, 'A zero-dependency, build-less SPA core with routing, DOM rendering, transitions, and loading built in.')
+                    ])
+                ]),
 				AZElement('section', {}, '', [$AI30000000])
 			])
 		]),
@@ -244,3 +244,13 @@ new AZRouter(
                 on404: '/',
         }
 );
+const observer = new MutationObserver(() => {
+	document.querySelectorAll('pre code:not(.hljs)').forEach(el => {
+		hljs.highlightElement(el);
+	});
+});
+
+observer.observe(document.body, {
+	childList: true,
+	subtree: true
+});
